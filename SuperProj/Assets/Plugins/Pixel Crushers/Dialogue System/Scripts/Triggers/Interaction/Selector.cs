@@ -187,12 +187,15 @@ namespace PixelCrushers.DialogueSystem
         public UsableUnityEvent onSelectedUsable = new UsableUnityEvent();
 
         public UsableUnityEvent onDeselectedUsable = new UsableUnityEvent();
-
+        
         /// <summary>
         /// The too far event handler.
         /// </summary>
         public UnityEvent tooFarEvent = new UnityEvent();
 
+
+        public UnityEvent<Usable> onClickedUsable = new UnityEvent<Usable>();
+        public UnityEvent<Usable> onUsedUsable = new UnityEvent<Usable>();
         /// <summary>
         /// If <c>true</c>, draws gizmos.
         /// </summary>
@@ -322,6 +325,7 @@ namespace PixelCrushers.DialogueSystem
             if (usable != null && usable.enabled && usable.gameObject.activeInHierarchy)
             {
                 clickedDownOn = null;
+                onClickedUsable.Invoke(usable); 
                 if (distance <= usable.maxUseDistance)
                 {
                     usable.OnUseUsable();
@@ -337,6 +341,7 @@ namespace PixelCrushers.DialogueSystem
                         {
                             usable.gameObject.SendMessage("OnUse", fromTransform, SendMessageOptions.DontRequireReceiver);
                         }
+                        onUsedUsable.Invoke(usable);
                     }
                 }
                 else
