@@ -324,6 +324,7 @@ namespace PixelCrushers.DialogueSystem
         {
             if (usable != null && usable.enabled && usable.gameObject.activeInHierarchy)
             {
+               
                 clickedDownOn = null;
                 onClickedUsable.Invoke(usable); 
                 if (distance <= usable.maxUseDistance)
