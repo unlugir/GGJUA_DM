@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6535607544294772096}
   - component: {fileID: 6535607544294772099}
   - component: {fileID: 6535607544294772159}
+  - component: {fileID: 8675885059363020272}
   m_Layer: 9
   m_Name: WorldItem
   m_TagString: Untagged
@@ -175,3 +176,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCursor: {fileID: 2800000, guid: b75ec3a8129b3ef4d9828e19b89bda10, type: 3}
+--- !u!114 &8675885059363020272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6535607544294772101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b871c74662c23945bf35b97caee462a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incrementOn: 0
+  variable: 
+  increment: 1
+  min: 0
+  max: 1
+  alertMessage: 
+  alertDuration: 0
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  onIncrement:
+    m_PersistentCalls:
+      m_Calls: []

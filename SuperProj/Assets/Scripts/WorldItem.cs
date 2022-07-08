@@ -15,7 +15,6 @@ public class WorldItem : MonoBehaviour
 
     public void Pick()
     {
-        Debug.Log("ADAS");
         Inventory.Instance.AddItem(item);
         Destroy(this.gameObject);
     }

@@ -17,6 +17,7 @@ public class InventoryView : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             var view = Instantiate(slotViewPrefab, this.transform);
+            view.gameObject.SetActive(true);
             views.Add(view);
         }
     }
