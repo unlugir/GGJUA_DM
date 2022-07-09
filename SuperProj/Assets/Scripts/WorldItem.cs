@@ -16,6 +16,7 @@ public class WorldItem : MonoBehaviour
     public void Pick()
     {
         Inventory.Instance.AddItem(item);
+        PickItemAnimator.Instance.Animate(item, transform.position);
         Destroy(this.gameObject);
     }
 }
