@@ -858,11 +858,11 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: KeyboardTyping
   - m_Version: 1
-    m_Start: 37.7
+    m_Start: 37.333333333333336
     m_ClipIn: 0
-    m_Asset: {fileID: 4915396617345662887}
-    m_Duration: 30.719999999999985
-    m_TimeScale: 1.0000000000000002
+    m_Asset: {fileID: 6058355890461847290}
+    m_Duration: 16.449999999999996
+    m_TimeScale: 1
     m_ParentTrack: {fileID: -2538265972902695977}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
@@ -925,7 +925,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: My name is Matviy
+    m_DisplayName: PenWriting
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 39.63333333333333
+  m_Time: 43.93333333333333
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 4b999eb33ba418242b127e00d93a26af, type: 2}
@@ -1042,6 +1042,7 @@ MonoBehaviour:
     m_Objects:
     - {fileID: 3072472571172087327}
     - {fileID: -1584903965650221366}
+    - {fileID: 808476469641946087}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1089,6 +1090,22 @@ MonoBehaviour:
   m_bufferingTime: 0.1
   m_ClipProperties:
     volume: 0.705
+--- !u!114 &808476469641946087
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 36.6640589569161
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 5ab7d728e8769f94084d309d0882e53f, type: 2}
 --- !u!114 &1883693413251958638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1365,7 +1382,7 @@ MonoBehaviour:
     m_Start: 36.6640589569161
     m_ClipIn: 0
     m_Asset: {fileID: -3793012895691231453}
-    m_Duration: 27.836666666666652
+    m_Duration: 23.135941043083896
     m_TimeScale: 1
     m_ParentTrack: {fileID: 2896911009823512128}
     m_EaseInDuration: 3
@@ -1444,7 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 68.41999999999999
+  m_Time: 59.8
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 39e4c2eb4357073469de582f1706f02c, type: 2}
@@ -1472,23 +1489,6 @@ MonoBehaviour:
   m_Markers:
     m_Objects: []
   m_serializedDataCollection: []
---- !u!114 &4915396617345662887
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 19ef19d9c46902f4c911036e5637a60e, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 0.9
 --- !u!114 &5703649507965144892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1503,6 +1503,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_color: {r: 1, g: 1, b: 1, a: 1}
   m_fadeType: 1
+--- !u!114 &6058355890461847290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: 06440c854d7fd0a46b2359ce34ec8ce4, type: 3}
+  m_Loop: 1
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
 --- !u!114 &7485081801682521928
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ public class PickItemAnimator : MonoBehaviour
     public void Animate(Item item, Vector3 wordPos)
     {
         itemImg.sprite = item.Icon;
+        itemImg.preserveAspect = true;
         transform.position = Camera.main.WorldToScreenPoint(wordPos);
         itemImg.enabled = true;
         itemImg.color = defaultColor;

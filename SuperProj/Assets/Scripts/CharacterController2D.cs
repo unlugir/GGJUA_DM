@@ -19,13 +19,18 @@ public class CharacterController2D : MonoBehaviour
     private Vector3 originalScale;
     
     Coroutine movementCoroutine;
+    [SerializeField] bool isPlayer = true;
 
     private void Start()
     {
-        selector = GetComponent<Selector>();
-        selector.tooFarEvent.AddListener(()=> MoveTo(selector.CurrentUsable));
-        selector.onClickedUsable.AddListener((usable) => Flip(usable.transform.position)) ;
-        selector.onUsedUsable.AddListener((usable) => StopMove());
+        if (isPlayer) 
+        {
+            selector = GetComponent<Selector>();
+            selector.tooFarEvent.AddListener(() => MoveTo(selector.CurrentUsable));
+            selector.onClickedUsable.AddListener((usable) => Flip(usable.transform.position));
+            selector.onUsedUsable.AddListener((usable) => StopMove());
+
+        }
 
         colliderHeight = GetComponent<CapsuleCollider2D>().size.y;
         originalScale = avatar.localScale;
@@ -42,6 +47,12 @@ public class CharacterController2D : MonoBehaviour
         if (!this.enabled) return;
         if (movementCoroutine != null) StopMove();
         movementCoroutine = StartCoroutine(StartMove(point, onReach));
+    }
+    public void MoveTo(Vector3 point, float maxDistance)
+    {
+        if (!this.enabled) return;
+        if (movementCoroutine != null) StopMove();
+        movementCoroutine = StartCoroutine(StartMove(point, maxDistance));
     }
 
     public void MoveTo(Usable usable) 
@@ -91,7 +102,29 @@ public class CharacterController2D : MonoBehaviour
         }
         onReach?.Invoke();
     }
-    
+
+    IEnumerator StartMove(Vector3 point, float maxDistance)
+    {
+        var spos = transform.position;
+        float time = Vector3.Distance(spos, point) / moveSpeed;
+        float timer = 0;
+        Flip(point);
+        while (timer < time)
+        {
+            timer += Time.deltaTime;
+            var targetPosition = Vector3.Lerp(spos, point, timer / time);
+            targetPosition.y = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, groundLayer).point.y
+                + colliderHeight / 2;
+            transform.position = targetPosition;
+            if (Vector3.Distance(targetPosition,transform.position) <= maxDistance)
+            {
+                timer = time;
+                break;
+            }
+            yield return null;
+        }
+    }
+
     private void Flip(Vector3 point)
     {
         isFlipped = transform.position.x - point.x > 0;

@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public int SlotAmount => slotAmount;
 
     public List<Slot> Slots;
+    //[SerializeField] List<Item> startingItems;
 
     private void Awake()
     {

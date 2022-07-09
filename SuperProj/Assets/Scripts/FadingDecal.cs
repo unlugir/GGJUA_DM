@@ -6,10 +6,10 @@ public class FadingDecal : MonoBehaviour
 {
     [SerializeField] bool isVisible;
     Color initialColor;
-    SpriteRenderer sprite;
+    [SerializeField] SpriteRenderer sprite;
     private void Start()
     {
-        sprite = this.GetComponent<SpriteRenderer>();
+        if (sprite == null) sprite = this.GetComponent<SpriteRenderer>();
         initialColor = sprite.color;
         if (!isVisible)
         {

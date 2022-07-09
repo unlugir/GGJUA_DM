@@ -35,6 +35,7 @@ public class SlotView : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         else
         {
             icon.sprite = slot.Item.Icon;
+            icon.preserveAspect = true;
             icon.gameObject.SetActive(true);
         }
     }
