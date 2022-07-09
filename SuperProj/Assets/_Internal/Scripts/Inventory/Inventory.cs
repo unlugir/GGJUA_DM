@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private int slotAmount = 8;
@@ -37,6 +38,10 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    public bool HasItem(Item item) 
+    {
+        return Slots.Any(s => s.Item.Id == item.Id);
+    }
     public void RemoveItem()
     {
 
