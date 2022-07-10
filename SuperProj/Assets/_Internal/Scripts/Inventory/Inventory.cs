@@ -47,9 +47,11 @@ public class Inventory : MonoBehaviour
     {
         return Slots.Any(s => s.Item.Id == item.Id);
     }
-    public void RemoveItem()
+    public void RemoveItem(int id)
     {
-
+        var validSlots = Slots.Where(s=>s.Item !=null).Where(s => s.Item.Id == id);
+        if (validSlots.Count() <= 0) return;
+        validSlots.First().Item = null;
     }
 
 }

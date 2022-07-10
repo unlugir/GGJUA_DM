@@ -277,7 +277,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 29d4cd621ff11df4eacda157a205bdb8, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -8003,6 +8003,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 4c1ae789-a32e-4541-a3e9-01fa33a18090
+        type: 0
+        typeString: 
       conversationID: 20
       isRoot: 0
       isGroup: 0
@@ -8025,7 +8029,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 293.32687
-        y: 1153.103
+        y: 1152.0392
         width: 160
         height: 30
     - id: 17
@@ -8081,7 +8085,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 294.0961
-        y: 1210.3124
+        y: 1209.2135
         width: 160
         height: 30
     - id: 18
@@ -8114,6 +8118,10 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: bdcf800e-c79c-442e-9ab2-e4ee75b92be2
         type: 0
         typeString: 
       conversationID: 20
@@ -8367,8 +8375,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 133.06107, y: 1091.9757}
-    canvasZoom: 0.87999994
+    canvasScrollPosition: {x: 0, y: 747.879}
+    canvasZoom: 0.9399999
   - id: 21
     fields:
     - title: Title
