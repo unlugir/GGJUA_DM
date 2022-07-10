@@ -5974,8 +5974,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 275.29404}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 24.43039}
+    canvasZoom: 1
   - id: 16
     fields:
     - title: Title
@@ -6897,7 +6897,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'CinemachinePriority(SpeakerVC, 20);
+
+          CinemachineTarget(SpeakerVC,
+          Hanna); {{default}};'
         type: 0
         typeString: 
       conversationID: 20
@@ -7011,7 +7014,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: CinemachineTarget(SpeakerVC, Girl); {{default}};
         type: 0
         typeString: 
       conversationID: 20
@@ -7123,7 +7126,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: CinemachineTarget(SpeakerVC, Hanna); {{default}};
         type: 0
         typeString: 
       conversationID: 20
@@ -7652,7 +7655,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: CinemachineTarget(SpeakerVC, Girl); {{default}};
         type: 0
         typeString: 
       conversationID: 20
@@ -7783,7 +7786,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("Good hands for Maria", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7821,7 +7824,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: CinemachineTarget(SpeakerVC, Hanna); {{default}};
         type: 0
         typeString: 
       conversationID: 20
@@ -7846,7 +7849,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 294.0961
-        y: 1211.4487
+        y: 1210.3124
         width: 160
         height: 30
     - id: 18
@@ -8060,7 +8063,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 20
+        originDialogueID: 21
+        destinationConversationID: 20
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -8072,9 +8081,62 @@ MonoBehaviour:
         y: 1429.9103
         width: 160
         height: 30
+    - id: 22
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 16
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[Leave the theatre.]'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 62a272a3-91e5-4777-a163-304da78e5b04
+        type: 0
+        typeString: 
+      conversationID: 20
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 298.12796
+        y: 1519.5654
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 707.7848}
-    canvasZoom: 0.70000017
+    canvasScrollPosition: {x: 133.06107, y: 1091.9757}
+    canvasZoom: 0.87999994
   syncInfo:
     syncActors: 0
     syncItems: 0
