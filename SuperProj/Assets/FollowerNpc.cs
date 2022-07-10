@@ -9,17 +9,25 @@ public class FollowerNpc : MonoBehaviour
     [SerializeField] float maxDistance;
     CharacterController2D characterController;
     bool isFollowing = true;
+    Animator animator;
     private void Start()
     {
+        animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController2D>();
     }
 
     private void Update()
     {
         if (!isFollowing) return;
-        if (Vector3.Distance(objToFollow.position, transform.position) > maxDistance ) 
+        if (characterController.IsMoving) return;
+        if (Vector3.Distance(objToFollow.position, transform.position) > maxDistance)
         {
+            animator.SetBool("IsWalking", true);
             characterController.MoveTo(objToFollow.position, 1f);
+        }
+        else 
+        {
+            animator.SetBool("IsWalking", false);
         }
     }
 

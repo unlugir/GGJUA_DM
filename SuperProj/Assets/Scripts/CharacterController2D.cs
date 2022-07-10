@@ -11,13 +11,18 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] float moveSpeed;
     public bool stayGrounded = true;
     [SerializeField] LayerMask groundLayer;
-    
+    Animator animator;
     Selector selector;
     float colliderHeight;
     private bool isFlipped = false;
     private Vector3 flippedScale;
     private Vector3 originalScale;
-    
+
+    public bool IsMoving { get 
+        {
+            if (movementCoroutine == null) return false;
+            return true;
+        } }
     Coroutine movementCoroutine;
     [SerializeField] bool isPlayer = true;
 
@@ -31,6 +36,7 @@ public class CharacterController2D : MonoBehaviour
             selector.onUsedUsable.AddListener((usable) => StopMove());
 
         }
+        animator = GetComponent<Animator>();
 
         colliderHeight = GetComponent<CapsuleCollider2D>().size.y;
         originalScale = avatar.localScale;
@@ -51,7 +57,9 @@ public class CharacterController2D : MonoBehaviour
     public void MoveTo(Vector3 point, float maxDistance)
     {
         if (!this.enabled) return;
+
         if (movementCoroutine != null) StopMove();
+        
         movementCoroutine = StartCoroutine(StartMove(point, maxDistance));
     }
 
@@ -64,6 +72,7 @@ public class CharacterController2D : MonoBehaviour
     public void StopMove() 
     {
         if (movementCoroutine != null) StopCoroutine(movementCoroutine);
+        animator.SetBool("IsWalking", false);
     }
 
     IEnumerator StartMove(Usable target) 
@@ -72,15 +81,18 @@ public class CharacterController2D : MonoBehaviour
         float time = Vector3.Distance(spos, target.transform.position) / moveSpeed;
         float timer = 0;
         Flip(target.transform.position);
+        animator.SetBool("IsWalking", true);
         while (Vector3.Distance(transform.position, target.transform.position) > target.maxUseDistance)
         {
             timer += Time.deltaTime;
             var targetPosition = Vector3.Lerp(spos, target.transform.position, timer / time);
+            
             targetPosition.y = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, groundLayer).point.y
                 + colliderHeight / 2;
             transform.position = targetPosition;
             yield return null;
         }
+        animator.SetBool("IsWalking", false);
         target.OnUseUsable();
         target.gameObject.BroadcastMessage("OnUse", this.transform, SendMessageOptions.DontRequireReceiver);
     }
@@ -91,6 +103,7 @@ public class CharacterController2D : MonoBehaviour
         float time = Vector3.Distance(spos, point) / moveSpeed;
         float timer = 0;
         Flip(point);
+        animator.SetBool("IsWalking", true);
         while (timer < time) 
         {
             timer += Time.deltaTime;
@@ -100,6 +113,7 @@ public class CharacterController2D : MonoBehaviour
             transform.position = targetPosition;
             yield return null;
         }
+        animator.SetBool("IsWalking", false);
         onReach?.Invoke();
     }
 
@@ -109,6 +123,7 @@ public class CharacterController2D : MonoBehaviour
         float time = Vector3.Distance(spos, point) / moveSpeed;
         float timer = 0;
         Flip(point);
+     
         while (timer < time)
         {
             timer += Time.deltaTime;
@@ -119,10 +134,12 @@ public class CharacterController2D : MonoBehaviour
             if (Vector3.Distance(targetPosition,transform.position) <= maxDistance)
             {
                 timer = time;
+                
                 break;
             }
             yield return null;
         }
+
     }
 
     private void Flip(Vector3 point)

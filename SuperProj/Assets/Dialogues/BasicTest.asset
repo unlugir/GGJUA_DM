@@ -389,7 +389,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: af9753ff0ad79e5478b2c19206dc36c7, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -4203,7 +4203,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'And what are you planning next? You''ve got a wounded huy, how will
+        value: 'And what are you planning next? You''ve got a wounded guy, how will
           you advance? And there is a child...
 
 '
@@ -4688,8 +4688,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.0100008
+    canvasScrollPosition: {x: 0, y: 229.53064}
+    canvasZoom: 0.9200009
   - id: 14
     fields:
     - title: Title
@@ -7135,6 +7135,10 @@ MonoBehaviour:
           Hanna); {{default}};'
         type: 0
         typeString: 
+      - title: EventGuid
+        value: 8a9a56e0-2bb6-4b01-beb3-ee8862f8f668
+        type: 0
+        typeString: 
       conversationID: 20
       isRoot: 0
       isGroup: 0
@@ -7212,7 +7216,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33.076927
+        x: 34.213295
         y: 160.76924
         width: 160
         height: 30
@@ -7270,7 +7274,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33.076927
+        x: 34.213295
         y: 249.23079
         width: 160
         height: 30
@@ -7682,7 +7686,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 33.076927
-        y: 751.5385
+        y: 750.40216
         width: 160
         height: 30
     - id: 11
@@ -7930,7 +7934,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 12
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7987,7 +7991,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 16
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -8047,7 +8051,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 12
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -8375,8 +8379,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 747.879}
-    canvasZoom: 0.9399999
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.0599998
   - id: 21
     fields:
     - title: Title
