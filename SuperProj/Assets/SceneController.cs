@@ -19,4 +19,8 @@ public class SceneController : MonoBehaviour
     {
         loadCanvas.DOFade(1, 2f).onComplete += () => SceneManager.LoadScene(2);
     }
+    public void LoadTitry()
+    {
+        SceneManager.LoadScene(3);
+    }
 }

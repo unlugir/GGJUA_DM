@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Locations/Location3.unity
     guid: 5a75fcd9e4c3ac84eb28360ce93b9f69
   - enabled: 1
+    path: Assets/Scenes/Locations/Titry.unity
+    guid: d92b6b3d536cefb4e85a956bb1ca7255
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CCTest.unity
     guid: b6bb565c8be307d4f819b205df4b0c57
   m_configObjects: {}
