@@ -8,9 +8,11 @@ public  class FadeAudioSource : MonoBehaviour
     AudioSource source;
     [SerializeField] float fadeTime;
     [SerializeField] float maxVol;
+    [SerializeField] bool playOnStart;
     private void Start()
     {
         source = GetComponent<AudioSource>();
+        if (playOnStart) Fade();
     }
     public void Fade() 
     {

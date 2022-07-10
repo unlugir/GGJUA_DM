@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public int SlotAmount => slotAmount;
 
     public List<Slot> Slots;
-    //[SerializeField] List<Item> startingItems;
+    [SerializeField] List<Item> startingItems;
 
     private void Awake()
     {
@@ -20,6 +20,10 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < slotAmount; i++)
         {
             Slots.Add(new Slot());
+            if (i < startingItems.Count) 
+            {
+                AddItem(startingItems[i]);
+            }
         }
 
     }
