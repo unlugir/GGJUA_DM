@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WalkieTalkie
   m_EditorClassIdentifier: 
   Id: 1
-  Icon: {fileID: 21300000, guid: 582975c5a41b7a14ebf866ae55db662e, type: 3}
+  Icon: {fileID: 21300000, guid: 8815be9a378ceba47a9ff77de9b1c5ff, type: 3}
