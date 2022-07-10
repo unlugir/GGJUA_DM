@@ -210,9 +210,10 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: eb42d857ffa946641a298cffe61d558f, type: 3}
+    portrait: {fileID: 2800000, guid: fbb444022340c1f4a9e1bba55760c233, type: 3}
     spritePortrait: {fileID: 0}
-    alternatePortraits: []
+    alternatePortraits:
+    - {fileID: 2800000, guid: fae445e41de761d4a99cdfa691233584, type: 3}
     spritePortraits: []
   - id: 9
     fields:
@@ -2115,7 +2116,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'We use this board for important announcements or to gather information. '
+        value: "We use this board for important announcements or \nto gather information. "
         type: 0
         typeString: 
       - title: Sequence
@@ -3344,7 +3345,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'My name is Matvii, I am 21 y.o. I love playing on the guitar and
+        value: 'My name is Matviy, I am 21 y.o. I love playing on the guitar and
           I also love to read Zhadan''s poems. I was born in Mariupol and lived here
           all my life. This happy, sometimes difficult but nevertheless beautiful
           life. Also I am an ordinary actor in the Mariupol Drama Theatre. At least...
@@ -3513,6 +3514,10 @@ MonoBehaviour:
 
           CinemachineTarget(SpeakerVC,
           speaker); {{default}};'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 07469050-2656-45d8-8741-c753d6682b55
         type: 0
         typeString: 
       conversationID: 13
@@ -4683,8 +4688,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 570.659}
-    canvasZoom: 1.1300007
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.0100008
   - id: 14
     fields:
     - title: Title
@@ -6304,7 +6309,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 96.92851
-        y: 285.75635
+        y: 284.7855
         width: 160
         height: 30
     - id: 4
@@ -6395,7 +6400,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 13564e9d-20c3-41d8-b0db-05b6e0f4753d
+        value: 60f8d497-79b8-4987-b4f9-da5de9c2118e
         type: 0
         typeString: 
       conversationID: 16
@@ -6418,8 +6423,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 89.32037}
-    canvasZoom: 1.03
+    canvasScrollPosition: {x: 49.816154, y: 66.20333}
+    canvasZoom: 1.1799998
   - id: 17
     fields:
     - title: Title
@@ -6810,7 +6815,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Until February 24th, I always used this bus to get to work.
+        value: 'Until February 24th, I always used this kind of taxi to get to the
+          theatre.
 
 '
         type: 0

@@ -41,7 +41,7 @@ public class TagsController : MonoBehaviour
             }
         }
         tagsData[size - 1, size - 1] = 0;
-        Mix(3);
+        Mix(300);
         this.gameObject.SetActive(isActiveOnStart);
 
     }

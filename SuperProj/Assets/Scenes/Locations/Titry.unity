@@ -863,6 +863,7 @@ GameObject:
   - component: {fileID: 1514709252}
   - component: {fileID: 1514709254}
   - component: {fileID: 1514709253}
+  - component: {fileID: 1514709255}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -886,7 +887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -160.00006, y: 17.809692}
+  m_AnchoredPosition: {x: -133, y: 17.809692}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1514709253
@@ -909,18 +910,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Marta
-
-    unlugir
-
-    Zedway
-
-    Art1
-
-    Art2
-
-
-'
+  m_text: "Artist: Kateryna Balyk\nArtist: Maria Lelikova\r\nGame Design: Marta Vitos
+    \r\nProgramming: Dmytro Herasymchyk \nSound Design: Max Poshkurlat\n\nSpecial
+    thanks: \r\nKsenia Veretskaya"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -947,8 +939,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26.6
+  m_fontSizeBase: 26.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -983,7 +975,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -154.6295, y: -175.24673, z: 0, w: -188.50072}
+  m_margin: {x: -287.5892, y: -175.24673, z: 0, w: -188.50072}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -997,6 +989,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514709251}
   m_CullTransparentMesh: 0
+--- !u!95 &1514709255
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514709251}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc232e09921d2914495856dacb4fa356, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1639023824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402, y: -234.11128}
+  m_AnchoredPosition: {x: 361, y: -234.11128}
   m_SizeDelta: {x: 108.35184, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639023826
