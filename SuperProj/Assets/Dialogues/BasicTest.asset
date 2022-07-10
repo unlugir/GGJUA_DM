@@ -2726,7 +2726,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9100001
+    canvasZoom: 1
   - id: 10
     fields:
     - title: Title
@@ -3348,8 +3348,9 @@ MonoBehaviour:
           I also love to read Zhadan''s poems. I was born in Mariupol and lived here
           all my life. This happy, sometimes difficult but nevertheless beautiful
           life. Also I am an ordinary actor in the Mariupol Drama Theatre. At least...
-          I was an actor before the war where the main goal is too evil to be true.
-          So now I devote all my time to volunteering and helping those in need.
+          I was an actor before the war the main goal of which is too evil to be
+          true. So now I devote all my time to volunteering and helping those in
+          need.
 
 '
         type: 0
